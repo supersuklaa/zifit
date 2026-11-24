@@ -1,9 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "@fontsource/pacifico/latin-400.css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --font-script: "Pacifico", cursive;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -50,25 +52,26 @@
   --ring: oklch(0.705 0.015 286.067);
 }
 
+/* Palette: cream rgb(250 243 224), peach rgb(234 191 159), brown rgb(182 137 115), charcoal rgb(30 33 45) */
 .dark {
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.841 0.238 128.85);
-  --primary-foreground: oklch(0.21 0.006 285.885);
-  --secondary: oklch(0.274 0.006 286.033);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.552 0.016 285.938);
+  --background: rgb(30 33 45);
+  --foreground: rgb(250 243 224);
+  --card: rgb(39 43 57);
+  --card-foreground: rgb(250 243 224);
+  --popover: rgb(39 43 57);
+  --popover-foreground: rgb(250 243 224);
+  --primary: rgb(234 191 159);
+  --primary-foreground: rgb(30 33 45);
+  --secondary: rgb(68 62 69);
+  --secondary-foreground: rgb(250 243 224);
+  --muted: rgb(68 62 69);
+  --muted-foreground: rgb(182 137 115);
+  --accent: rgb(68 62 69);
+  --accent-foreground: rgb(250 243 224);
+  --destructive: rgb(232 112 96);
+  --border: rgb(182 137 115 / 18%);
+  --input: rgb(182 137 115 / 28%);
+  --ring: rgb(182 137 115);
 }
 
 @layer base {

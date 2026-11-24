@@ -1,6 +1,9 @@
 // Minimal offline support: network-first for pages, stale-while-revalidate for assets.
-const CACHE = 'zifit-v4'
-const PRECACHE = ['/', '/index.html', '/manifest.webmanifest', '/icon.svg']
+const CACHE = 'zifit-v5'
+// Resolve against the worker's location so the app works under any sub-path (e.g. /zifit/).
+const url = (path) => new URL(path, self.location).href
+const INDEX = url('index.html')
+const PRECACHE = [url('./'), INDEX, url('manifest.webmanifest'), url('icon.svg')]
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE).then((c) => c.addAll(PRECACHE)))
@@ -25,10 +28,10 @@ self.addEventListener('fetch', (event) => {
       fetch(request)
         .then((res) => {
           const copy = res.clone()
-          caches.open(CACHE).then((c) => c.put('/index.html', copy))
+          caches.open(CACHE).then((c) => c.put(INDEX, copy))
           return res
         })
-        .catch(() => caches.match('/index.html')),
+        .catch(() => caches.match(INDEX)),
     )
     return
   }

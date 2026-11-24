@@ -2,16 +2,16 @@
   "name": "Zifit – Gym Workout Tracker",
   "short_name": "Zifit",
   "description": "Design and track your gym workouts. Data stays on your device.",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#3b3030",
   "theme_color": "#3b3030",
   "icons": [
-    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" },
-    { "src": "/pwa-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/pwa-512.png", "sizes": "512x512", "type": "image/png" },
-    { "src": "/pwa-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "pwa-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "pwa-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "pwa-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }

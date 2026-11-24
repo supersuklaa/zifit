@@ -14,9 +14,13 @@ A small offline-first PWA for designing and tracking gym workouts. Built with Re
 ```sh
 npm install
 npm run dev      # dev server
-npm run build    # type-check + production build
-npm run preview  # serve the build (service worker is only registered in production)
+npm run build    # type-check + production build (served from /zifit/)
+npm run preview  # serve the build at http://localhost:4173/zifit/ (service worker is only registered in production)
 ```
+
+## Deployment
+
+Production builds use the base path `/zifit/` (set via `--base` in the `build`/`preview` scripts). The manifest and service worker use relative URLs, so only that flag needs changing to host elsewhere.
 
 ## Notes
 
